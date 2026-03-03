@@ -1,0 +1,209 @@
+[project]
+site_name = "Agentic AI"
+site_description = "Notes related to Agentic AI."
+site_author = "Danish Ahmed"
+# site_url = "https://www.example.com/"
+
+copyright = """
+Copyright &copy; 2026 Arc Systems
+"""
+
+nav = [
+    { "Home" = "README.md" },
+
+    { "Overview" = [
+        "overview/README.md",
+        { "What is Agency" = "overview/what-is-agency.md" },
+        { "Evolution of Agents" = "overview/evolution-of-agents.md" },
+        { "LLM Agent Paradigm" = "overview/llm-agent-paradigm.md" },
+        { "Challenges" = "overview/challenges.md" },
+    ] },
+
+    { "Fundamentals" = [
+        "fundamentals/README.md",
+        { "Prompting Basics" = "fundamentals/prompting-basics.md" },
+        { "Simple Agent Loops" = "fundamentals/simple-agent-loops.md" },
+        { "Basic Tool Calling" = "fundamentals/basic-tool-calling.md" },
+        { "Context Management" = "fundamentals/context-management.md" },
+        { "Structured Outputs" = "fundamentals/structured-outputs.md" },
+        { "Basic Error Handling" = "fundamentals/basic-error-handling.md" },
+        { "State Basics" = "fundamentals/state-basics.md" },
+    ] },
+
+    { "Agent Architectures" = [
+        "agent-architectures/README.md",
+        { "Agent Loop" = "agent-architectures/agent-loop.md" },
+        { "ReAct" = "agent-architectures/react.md" },
+        { "Planning Architectures" = "agent-architectures/planning-architectures.md" },
+        { "Reflection" = "agent-architectures/reflection.md" },
+        { "Autonomous Agents" = "agent-architectures/autonomous-agents.md" },
+        { "Advanced Patterns" = "agent-architectures/advanced-patterns.md" },
+        { "Design Principles" = "agent-architectures/design-principles.md" },
+    ] },
+
+    { "Tool Use" = [
+        "tool-use/README.md",
+        { "Function Calling" = "tool-use/function-calling.md" },
+        { "Tool Schemas" = "tool-use/tool-schemas.md" },
+        { "Tool Selection" = "tool-use/tool-selection.md" },
+        { "Tool Chaining" = "tool-use/tool-chaining.md" },
+        { "Error Handling" = "tool-use/error-handling.md" },
+        { "API Integration" = "tool-use/api-integration.md" },
+    ] },
+
+    { "Planning and Reasoning" = [
+        "planning-and-reasoning/README.md",
+        { "Chain of Thought" = "planning-and-reasoning/chain-of-thought.md" },
+        { "Tree of Thought" = "planning-and-reasoning/tree-of-thought.md" },
+        { "Task Decomposition" = "planning-and-reasoning/task-decomposition.md" },
+        { "Planning Strategies" = "planning-and-reasoning/planning-strategies.md" },
+        { "Task Tracking" = "planning-and-reasoning/task-tracking.md" },
+        { "Implementation Plans" = "planning-and-reasoning/implementation-plans.md" },
+        { "Uncertainty" = "planning-and-reasoning/uncertainty.md" },
+    ] },
+
+    { "Memory Systems" = [
+        "memory-systems/README.md",
+        { "Memory Architecture" = "memory-systems/memory-architecture.md" },
+        { "Short Term Memory" = "memory-systems/short-term-memory.md" },
+        { "Long Term Memory" = "memory-systems/long-term-memory.md" },
+        { "Episodic Memory" = "memory-systems/episodic-memory.md" },
+        { "Semantic Memory" = "memory-systems/semantic-memory.md" },
+        { "Memory Retrieval" = "memory-systems/memory-retrieval.md" },
+        { "Memory Consolidation" = "memory-systems/memory-consolidation.md" },
+    ] },
+
+    { "Model Context Protocol" = [
+        "model-context-protocol/README.md",
+        { "MCP Fundamentals" = "model-context-protocol/mcp-fundamentals.md" },
+        { "MCP Architecture" = "model-context-protocol/mcp-architecture.md" },
+        { "MCP Resources" = "model-context-protocol/mcp-resources.md" },
+        { "MCP Tools" = "model-context-protocol/mcp-tools.md" },
+        { "MCP Prompts" = "model-context-protocol/mcp-prompts.md" },
+        { "MCP Context" = "model-context-protocol/mcp-context.md" },
+        { "Building MCP Servers" = "model-context-protocol/building-mcp-servers.md" },
+        { "MCP Ecosystem" = "model-context-protocol/mcp-ecosystem.md" },
+    ] },
+
+    { "Multi Agent Systems" = [
+        "multi-agent-systems/README.md",
+        { "Fundamentals" = "multi-agent-systems/fundamentals.md" },
+        { "Agent Roles" = "multi-agent-systems/agent-roles.md" },
+        { "Communication" = "multi-agent-systems/communication.md" },
+        { "Coordination" = "multi-agent-systems/coordination.md" },
+        { "Delegation" = "multi-agent-systems/delegation.md" },
+        { "Collaboration" = "multi-agent-systems/collaboration.md" },
+        { "Debate" = "multi-agent-systems/debate.md" },
+        { "Swarm Intelligence" = "multi-agent-systems/swarm-intelligence.md" },
+    ] },
+
+    { "Orchestration Patterns" = [
+        "orchestration-patterns/README.md",
+        { "Workflow Patterns" = "orchestration-patterns/workflow-patterns.md" },
+        { "State Management" = "orchestration-patterns/state-management.md" },
+        { "Control Flow" = "orchestration-patterns/control-flow.md" },
+        { "Parallelization" = "orchestration-patterns/parallelization.md" },
+        { "Background Processes" = "orchestration-patterns/background-processes.md" },
+        { "Artifacts" = "orchestration-patterns/artifacts.md" },
+        { "Filesystem Context" = "orchestration-patterns/filesystem-context.md" },
+        { "Subagent Patterns" = "orchestration-patterns/subagent-patterns.md" },
+        { "Human in the Loop" = "orchestration-patterns/human-in-the-loop.md" },
+        { "Visual Workflows" = "orchestration-patterns/visual-workflows.md" },
+        { "Event Driven" = "orchestration-patterns/event-driven.md" },
+    ] },
+
+    { "Evaluation" = [
+        "evaluation/README.md",
+        { "Evaluation Fundamentals" = "evaluation/evaluation-fundamentals.md" },
+        { "Success Metrics" = "evaluation/success-metrics.md" },
+        { "Reasoning Quality" = "evaluation/reasoning-quality.md" },
+        { "Tool Use Evaluation" = "evaluation/tool-use-evaluation.md" },
+        { "Efficiency Metrics" = "evaluation/efficiency-metrics.md" },
+        { "Robustness" = "evaluation/robustness.md" },
+        { "Benchmarks" = "evaluation/benchmarks.md" },
+        { "Human Evaluation" = "evaluation/human-evaluation.md" },
+        { "Continuous Evaluation" = "evaluation/continuous-evaluation.md" },
+    ] },
+
+    { "Resources" = "resources.md" },
+]
+
+# extra_css = ["stylesheets/extra.css"]
+# extra_javascript = ["javascripts/extra.js"]
+
+[project.theme]
+# variant = "classic"
+# custom_dir = "overrides"
+# favicon = "images/favicon.png"
+language = "en"
+
+features = [
+    "announce.dismiss",
+    # "content.action.edit",
+    # "content.action.view",
+    "content.code.annotate",
+    "content.code.copy",
+    "content.code.select",
+    "content.footnote.tooltips",
+    "content.tabs.link",
+    "content.tooltips",
+    # "header.autohide",
+    # "navigation.expand",
+    "navigation.footer",
+    "navigation.indexes",
+    "navigation.instant",
+    "navigation.instant.prefetch",
+    "navigation.instant.progress",
+    "navigation.path",
+    "navigation.prune",
+    # "navigation.sections",
+    # "navigation.tabs",
+    # "navigation.tabs.sticky",
+    "navigation.top",
+    "navigation.tracking",
+    "search.highlight",
+    "toc.follow",
+    # "toc.integrate",
+]
+
+[project.theme.palette]
+scheme = "slate"
+primary = "red"
+accent = "red"
+
+[project.theme.font]
+text = "Roboto"
+code = "Jetbrains Mono"
+
+# [project.theme.icon]
+# logo = "lucide/smile"
+# repo = "lucide/smile"
+
+# [[project.extra.social]]
+# icon = "fontawesome/brands/github"
+# link = "https://github.com/user/repo"
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+    { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+
+[project.markdown_extensions.pymdownx.tabbed.slugify]
+object = "pymdownx.slugs.slugify"
+kwds = { case = "lower" }
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+
+[project.extra]
+generator = false
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+
+line_spans = "__span"
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.snippets]
