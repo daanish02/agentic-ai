@@ -1,0 +1,2581 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Notes related to Agentic AI.">
+      
+      
+        <meta name="author" content="Danish Ahmed">
+      
+      
+      
+        <link rel="prev" href="../llm-agent-paradigm/">
+      
+      
+        <link rel="next" href="../../fundamentals/README.md">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.24">
+    
+    
+      
+        <title>Challenges and Considerations - Agentic AI</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.28978c9b.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#challenges-and-considerations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Agentic AI" class="md-header__button md-logo" aria-label="Agentic AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agentic AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Challenges and Considerations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Agentic AI" class="md-nav__button md-logo" aria-label="Agentic AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Agentic AI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Overview
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-agency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What is Agency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evolution-of-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evolution of Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llm-agent-paradigm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM Agent Paradigm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenges
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-reliability-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Reliability Challenge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Reliability Challenge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-agents-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Agents Fail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-reliability-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Reliability Stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hallucination-and-factuality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hallucination and Factuality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hallucination and Factuality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-hallucination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Hallucination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigation-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigation Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robustness-and-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robustness and Error Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Robustness and Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Failure Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safety-and-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety and Alignment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Safety and Alignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safety-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety Concerns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety Mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controllability-and-predictability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controllability and Predictability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controllability and Predictability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controllability-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controllability Challenges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-and-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost and Efficiency
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost and Efficiency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cost-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost Factors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficiency-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Efficiency Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability-and-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observability and Debugging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Observability and Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observability-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observability Challenges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observability-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observability Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation and Testing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation and Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Challenges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Approaches
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-principles-for-robust-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Principles for Robust Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Principles for Robust Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fail-explicitly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fail Explicitly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-build-in-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Build in Observability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-layer-defenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Layer Defenses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-start-restrictive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Start Restrictive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-design-for-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Design for Failure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-human-in-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Human in the Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-incremental-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Incremental Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-monitor-continuously" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Monitor Continuously
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../fundamentals/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../agent-architectures/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../tool-use/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../planning-and-reasoning/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../memory-systems/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../model-context-protocol/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../multi-agent-systems/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../orchestration-patterns/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evaluation/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-reliability-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Reliability Challenge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Reliability Challenge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-agents-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Agents Fail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-reliability-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Reliability Stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hallucination-and-factuality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hallucination and Factuality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hallucination and Factuality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-hallucination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Hallucination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigation-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigation Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robustness-and-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robustness and Error Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Robustness and Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Failure Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safety-and-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety and Alignment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Safety and Alignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safety-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety Concerns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety Mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controllability-and-predictability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controllability and Predictability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controllability and Predictability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controllability-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controllability Challenges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Mechanisms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-and-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost and Efficiency
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost and Efficiency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cost-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost Factors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficiency-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Efficiency Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability-and-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observability and Debugging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Observability and Debugging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observability-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observability Challenges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observability-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observability Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation and Testing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluation and Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Challenges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Approaches
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-principles-for-robust-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Principles for Robust Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Principles for Robust Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fail-explicitly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fail Explicitly
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-build-in-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Build in Observability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-layer-defenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Layer Defenses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-start-restrictive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Start Restrictive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-design-for-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Design for Failure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-human-in-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Human in the Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-incremental-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Incremental Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-monitor-continuously" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Monitor Continuously
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Overview
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="challenges-and-considerations">Challenges and Considerations</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#the-reliability-challenge">The Reliability Challenge</a></li>
+<li><a href="#hallucination-and-factuality">Hallucination and Factuality</a></li>
+<li><a href="#robustness-and-error-handling">Robustness and Error Handling</a></li>
+<li><a href="#safety-and-alignment">Safety and Alignment</a></li>
+<li><a href="#controllability-and-predictability">Controllability and Predictability</a></li>
+<li><a href="#cost-and-efficiency">Cost and Efficiency</a></li>
+<li><a href="#observability-and-debugging">Observability and Debugging</a></li>
+<li><a href="#evaluation-and-testing">Evaluation and Testing</a></li>
+<li><a href="#design-principles-for-robust-agents">Design Principles for Robust Agents</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+<h2 id="the-reliability-challenge">The Reliability Challenge</h2>
+<p>Agents are more than single LLM calls - they are <strong>systems</strong>. And like all systems, they can fail in complex, unexpected ways.</p>
+<p><strong>The core challenge</strong>: Building agents that reliably accomplish goals in unpredictable environments, despite imperfect reasoning and partial information.</p>
+<h3 id="why-agents-fail">Why Agents Fail</h3>
+<ol>
+<li><strong>LLM limitations</strong>: Hallucination, reasoning errors, inconsistency</li>
+<li><strong>Tool failures</strong>: APIs down, rate limits, incorrect tool usage</li>
+<li><strong>Planning failures</strong>: Infinite loops, inefficient paths, abandoned goals</li>
+<li><strong>Context limitations</strong>: Losing important information, context overflow</li>
+<li><strong>Environment unpredictability</strong>: Unexpected states, missing information</li>
+</ol>
+<h3 id="the-reliability-stack">The Reliability Stack</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Application layer: Task completion, goal achievement
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Agent layer: Planning, tool selection, reasoning
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>LLM layer: Language understanding, generation
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Tool layer: External APIs, functions, databases
+</span></code></pre></div>
+<p>Failure at any layer can cascade upward. Robust agents must handle failures at every level.</p>
+<h2 id="hallucination-and-factuality">Hallucination and Factuality</h2>
+<p><strong>Hallucination</strong>: The LLM generates plausible-sounding but incorrect information.</p>
+<h3 id="types-of-hallucination">Types of Hallucination</h3>
+<p><strong>Factual errors</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Agent: &quot;The Pacific Ocean is the smallest ocean&quot;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Reality: It&#39;s the largest
+</span></code></pre></div>
+<p><strong>Fabricated information</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Agent: &quot;According to the 2024 Smith study...&quot;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Reality: No such study exists
+</span></code></pre></div>
+<p><strong>Incorrect reasoning</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Agent: &quot;Since all birds can fly, penguins can fly&quot;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Reality: Penguins cannot fly
+</span></code></pre></div>
+<p><strong>Tool misuse</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Agent calls get_weather(&quot;tomorrow&quot;) when tool requires city name
+</span></code></pre></div>
+<h3 id="mitigation-strategies">Mitigation Strategies</h3>
+<p><strong>1. Verification</strong>:</p>
+<ul>
+<li>Cross-reference claims with reliable sources</li>
+<li>Use retrieval to ground responses</li>
+<li>Require citations for factual claims</li>
+</ul>
+<p><strong>2. Uncertainty awareness</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Agent: &quot;I&#39;m not certain, but I believe...&quot;
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Agent: &quot;I don&#39;t have reliable information about...&quot;
+</span></code></pre></div>
+<p><strong>3. Structured outputs</strong>:</p>
+<ul>
+<li>Use JSON schemas to constrain generation</li>
+<li>Validate outputs against schemas</li>
+<li>Reject malformed responses</li>
+</ul>
+<p><strong>4. Retrieval augmentation</strong>:</p>
+<ul>
+<li>Ground responses in retrieved documents</li>
+<li>Prefer cited facts over generated claims</li>
+</ul>
+<p><strong>5. Human-in-the-loop</strong>:</p>
+<ul>
+<li>Flag uncertain decisions for human review</li>
+<li>Require approval for critical actions</li>
+</ul>
+<h2 id="robustness-and-error-handling">Robustness and Error Handling</h2>
+<p>Agents operate in unpredictable environments. Robust agents must handle errors gracefully.</p>
+<h3 id="common-failure-modes">Common Failure Modes</h3>
+<p><strong>Tool failures</strong>:</p>
+<ul>
+<li>API timeouts</li>
+<li>Rate limiting</li>
+<li>Invalid parameters</li>
+<li>Unexpected response formats</li>
+</ul>
+<p><strong>Planning failures</strong>:</p>
+<ul>
+<li>Infinite loops (agent repeats same action)</li>
+<li>Circular reasoning</li>
+<li>Abandoning goal prematurely</li>
+<li>Inefficient strategies</li>
+</ul>
+<p><strong>Context failures</strong>:</p>
+<ul>
+<li>Losing important information</li>
+<li>Context window overflow</li>
+<li>Forgetting earlier decisions</li>
+</ul>
+<h3 id="error-handling-strategies">Error Handling Strategies</h3>
+<p><strong>1. Retries with backoff</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Try tool call
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>If fails: wait, then retry
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>If fails again: wait longer, retry
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>If fails repeatedly: try alternative approach
+</span></code></pre></div>
+<p><strong>2. Fallback strategies</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Primary plan fails → Use backup plan
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Tool unavailable → Use alternative tool
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Information missing → Ask for clarification
+</span></code></pre></div>
+<p><strong>3. Graceful degradation</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Cannot complete full task → Complete partial task
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Cannot get perfect answer → Provide best-effort approximation
+</span></code></pre></div>
+<p><strong>4. Loop detection</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Track recent actions
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>If same action repeated 3+ times → Break loop
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Try different approach or ask for help
+</span></code></pre></div>
+<p><strong>5. Explicit failure modes</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Agent: &quot;I cannot complete this task because...&quot;
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Better than: Agent loops endlessly or hallucinate a solution
+</span></code></pre></div>
+<h2 id="safety-and-alignment">Safety and Alignment</h2>
+<p>Agents that can act autonomously pose safety risks. How do we ensure agents behave as intended?</p>
+<h3 id="safety-concerns">Safety Concerns</h3>
+<p><strong>Unintended actions</strong>:</p>
+<ul>
+<li>Deleting important files</li>
+<li>Making unauthorized API calls</li>
+<li>Modifying production systems</li>
+<li>Leaking sensitive information</li>
+</ul>
+<p><strong>Goal misalignment</strong>:</p>
+<ul>
+<li>Agent pursues literal goal, ignoring intended spirit</li>
+<li>Optimizes wrong metric</li>
+<li>Creates unintended side effects</li>
+</ul>
+<p><strong>Prompt injection</strong>:</p>
+<ul>
+<li>User inputs that override agent instructions</li>
+<li>Malicious instructions embedded in tool outputs</li>
+</ul>
+<h3 id="safety-mechanisms">Safety Mechanisms</h3>
+<p><strong>1. Permission systems</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Read-only mode: Agent can observe but not modify
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Sandbox mode: Agent operates in isolated environment
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Approval-required: Human must approve critical actions
+</span></code></pre></div>
+<p><strong>2. Action boundaries</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Whitelist of allowed tools
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Blacklist of forbidden operations
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Rate limits on actions
+</span></code></pre></div>
+<p><strong>3. Output validation</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Check generated code for dangerous patterns
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Validate file paths before writing
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Sanitize inputs to external systems
+</span></code></pre></div>
+<p><strong>4. Monitoring and alerts</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Log all agent actions
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Alert on suspicious behavior
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Track resource usage and costs
+</span></code></pre></div>
+<p><strong>5. Prompt hardening</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>System prompts that resist injection
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Separation of instructions from user input
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Validation of tool outputs
+</span></code></pre></div>
+<h2 id="controllability-and-predictability">Controllability and Predictability</h2>
+<p>Agents make autonomous decisions. How do we maintain control?</p>
+<h3 id="controllability-challenges">Controllability Challenges</h3>
+<p><strong>Non-determinism</strong>: Same input → different outputs</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Run 1: Agent searches, then analyzes
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Run 2: Agent analyzes first, gets stuck
+</span></code></pre></div>
+<p><strong>Opacity</strong>: Hard to predict what agent will do</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&quot;Why did the agent choose that tool?&quot;
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>&quot;What will it do next?&quot;
+</span></code></pre></div>
+<p><strong>Emergent behavior</strong>: Unexpected strategies</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Agent discovers creative but risky approaches
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>Agent optimizes for unintended metrics
+</span></code></pre></div>
+<h3 id="control-mechanisms">Control Mechanisms</h3>
+<p><strong>1. Explicit constraints</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>&quot;You must call search_tool before analyze_tool&quot;
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>&quot;Maximum 10 tool calls per task&quot;
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>&quot;Never modify files in /system/&quot;
+</span></code></pre></div>
+<p><strong>2. Structured outputs</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Agent must output:
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>{
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>  &quot;reasoning&quot;: &quot;...&quot;,
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>  &quot;planned_actions&quot;: [...],
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>  &quot;next_action&quot;: {...}
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>}
+</span></code></pre></div>
+<p><strong>3. Approval workflows</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Agent proposes action → Human approves/rejects → Agent executes
+</span></code></pre></div>
+<p><strong>4. Confidence thresholds</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>if confidence &lt; 0.7:
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    ask_human_for_guidance()
+</span></code></pre></div>
+<p><strong>5. Staged rollout</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Test in sandbox → Verify behavior → Deploy to production
+</span></code></pre></div>
+<h2 id="cost-and-efficiency">Cost and Efficiency</h2>
+<p>LLM agents are expensive. Every reasoning step costs money.</p>
+<h3 id="cost-factors">Cost Factors</h3>
+<p><strong>Token usage</strong>:</p>
+<ul>
+<li>Input tokens: prompts, context, tool schemas</li>
+<li>Output tokens: reasoning, tool calls, responses</li>
+<li>Cost: $0.01 - $0.10 per 1000 tokens (model-dependent)</li>
+</ul>
+<p><strong>Number of iterations</strong>:</p>
+<ul>
+<li>More steps → more cost</li>
+<li>Complex tasks → many iterations</li>
+<li>Inefficient planning → wasted tokens</li>
+</ul>
+<p><strong>Context accumulation</strong>:</p>
+<ul>
+<li>Long conversations → large context</li>
+<li>Rich tool outputs → token-heavy</li>
+<li>Memory retrieval → added tokens</li>
+</ul>
+<h3 id="efficiency-strategies">Efficiency Strategies</h3>
+<p><strong>1. Prompt optimization</strong>:</p>
+<ul>
+<li>Concise tool descriptions</li>
+<li>Remove unnecessary context</li>
+<li>Use structured formats</li>
+</ul>
+<p><strong>2. Smaller models when possible</strong>:</p>
+<ul>
+<li>Simple tasks → smaller models</li>
+<li>Complex reasoning → larger models</li>
+<li>Right-sizing saves money</li>
+</ul>
+<p><strong>3. Caching</strong>:</p>
+<ul>
+<li>Cache tool outputs</li>
+<li>Reuse reasoning patterns</li>
+<li>Avoid redundant calls</li>
+</ul>
+<p><strong>4. Early termination</strong>:</p>
+<ul>
+<li>Stop when goal achieved</li>
+<li>Detect unproductive loops</li>
+<li>Set maximum iteration limits</li>
+</ul>
+<p><strong>5. Batch operations</strong>:</p>
+<ul>
+<li>Process multiple items together</li>
+<li>Amortize setup costs</li>
+</ul>
+<h2 id="observability-and-debugging">Observability and Debugging</h2>
+<p>Agents are opaque. You can't step through their reasoning like traditional code.</p>
+<h3 id="observability-challenges">Observability Challenges</h3>
+<p><strong>Black box reasoning</strong>: Why did agent choose that action?
+<strong>Non-determinism</strong>: Bugs hard to reproduce
+<strong>Async operations</strong>: Actions interleaved with reasoning
+<strong>Emergent failures</strong>: System-level issues from component interactions</p>
+<h3 id="observability-strategies">Observability Strategies</h3>
+<p><strong>1. Detailed logging</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>[timestamp] Observation: User request...
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>[timestamp] Reasoning: I need to first...
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>[timestamp] Action: search_tool(query=&quot;...&quot;)
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>[timestamp] Tool Output: [results]
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>[timestamp] Reasoning: Based on results, I will...
+</span></code></pre></div>
+<p><strong>2. Tracing</strong>:</p>
+<ul>
+<li>Unique ID per agent run</li>
+<li>Parent-child relationships for subagents</li>
+<li>Tool call traces</li>
+<li>Timing information</li>
+</ul>
+<p><strong>3. Structured events</strong>:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">{</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span><span class="nt">&quot;event&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tool_call&quot;</span><span class="p">,</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">  </span><span class="nt">&quot;tool&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;search_papers&quot;</span><span class="p">,</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">  </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">  </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">  </span><span class="nt">&quot;duration_ms&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">234</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>4. Visualization</strong>:</p>
+<ul>
+<li>Reasoning traces as graphs</li>
+<li>Tool call sequences</li>
+<li>Decision trees</li>
+</ul>
+<p><strong>5. Replay and debugging</strong>:</p>
+<ul>
+<li>Save agent state at each step</li>
+<li>Replay runs with different prompts</li>
+<li>Test counterfactual scenarios</li>
+</ul>
+<h2 id="evaluation-and-testing">Evaluation and Testing</h2>
+<p>How do you test an agent? Traditional unit tests don't apply to non-deterministic systems.</p>
+<h3 id="evaluation-challenges">Evaluation Challenges</h3>
+<p><strong>Non-determinism</strong>: Same test → different results
+<strong>Complex outputs</strong>: How to check correctness?
+<strong>Multi-step tasks</strong>: Partial credit? Multiple valid paths?
+<strong>Open-ended goals</strong>: What counts as success?</p>
+<h3 id="evaluation-approaches">Evaluation Approaches</h3>
+<p><strong>1. Task completion metrics</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Did agent achieve the goal? Yes/No
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>How many steps did it take?
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>What was the final quality?
+</span></code></pre></div>
+<p><strong>2. Process evaluation</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Did agent follow proper reasoning?
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Were tool calls appropriate?
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Did agent handle errors well?
+</span></code></pre></div>
+<p><strong>3. Unit testing components</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Test tool selection logic
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>Test retry mechanisms
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>Test memory retrieval
+</span></code></pre></div>
+<p><strong>4. Integration testing</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Run agent on synthetic tasks
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>Verify end-to-end behavior
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>Check edge cases
+</span></code></pre></div>
+<p><strong>5. Human evaluation</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Usefulness: Did output help user?
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>Correctness: Was information accurate?
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>Efficiency: Was approach reasonable?
+</span></code></pre></div>
+<p><strong>6. Regression testing</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>Maintain suite of benchmark tasks
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>Track performance over time
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>Detect degradation early
+</span></code></pre></div>
+<h2 id="design-principles-for-robust-agents">Design Principles for Robust Agents</h2>
+<h3 id="1-fail-explicitly">1. Fail Explicitly</h3>
+<p>Better to admit failure than hallucinate success.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>&quot;I cannot complete this task&quot; &gt; &quot;Task completed&quot; (when it wasn&#39;t)
+</span></code></pre></div>
+<h3 id="2-build-in-observability">2. Build in Observability</h3>
+<p>Log everything. You'll need it when debugging.</p>
+<h3 id="3-layer-defenses">3. Layer Defenses</h3>
+<p>Multiple safety mechanisms are better than one.</p>
+<h3 id="4-start-restrictive">4. Start Restrictive</h3>
+<p>Begin with limited capabilities, expand carefully.</p>
+<h3 id="5-design-for-failure">5. Design for Failure</h3>
+<p>Assume tools will fail. Plan for it.</p>
+<h3 id="6-human-in-the-loop">6. Human in the Loop</h3>
+<p>For critical decisions, require human approval.</p>
+<h3 id="7-incremental-deployment">7. Incremental Deployment</h3>
+<p>Test in sandbox → Limited rollout → Full production.</p>
+<h3 id="8-monitor-continuously">8. Monitor Continuously</h3>
+<p>Track behavior in production. Detect anomalies.</p>
+<h2 id="summary">Summary</h2>
+<p>Building reliable agent systems requires addressing multiple challenges:</p>
+<p><strong>Technical challenges</strong>:</p>
+<ul>
+<li>Hallucination and factual accuracy</li>
+<li>Robustness to tool failures</li>
+<li>Context management</li>
+<li>Cost and efficiency</li>
+</ul>
+<p><strong>Safety challenges</strong>:</p>
+<ul>
+<li>Preventing unintended actions</li>
+<li>Aligning agent behavior with intentions</li>
+<li>Protecting against prompt injection</li>
+</ul>
+<p><strong>Operational challenges</strong>:</p>
+<ul>
+<li>Observability and debugging</li>
+<li>Testing and evaluation</li>
+<li>Monitoring and maintenance</li>
+</ul>
+<p><strong>Key insight</strong>: Agents are systems, not just prompts. They require careful engineering, testing, and operational practices.</p>
+<p>The frontier of agentic AI is not just making agents more capable, but making them <strong>reliably capable</strong> - systems that can be trusted with real-world tasks.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../llm-agent-paradigm/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LLM Agent Paradigm">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                LLM Agent Paradigm
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../fundamentals/README.md" class="md-footer__link md-footer__link--next" aria-label="Next: none">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                none
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Arc Systems
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.16f8adc2.min.js"></script>
+      
+    
+  </body>
+</html>

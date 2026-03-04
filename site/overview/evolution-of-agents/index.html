@@ -1,0 +1,2647 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Notes related to Agentic AI.">
+      
+      
+        <meta name="author" content="Danish Ahmed">
+      
+      
+      
+        <link rel="prev" href="../what-is-agency/">
+      
+      
+        <link rel="next" href="../llm-agent-paradigm/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.24">
+    
+    
+      
+        <title>Evolution of Agent Systems - Agentic AI</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.28978c9b.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#evolution-of-agent-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Agentic AI" class="md-header__button md-logo" aria-label="Agentic AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agentic AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Evolution of Agent Systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Agentic AI" class="md-nav__button md-logo" aria-label="Agentic AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Agentic AI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Overview
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-agency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What is Agency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evolution of Agents
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evolution of Agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-deterministic-to-intelligent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Deterministic to Intelligent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deterministic-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deterministic Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deterministic Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactive-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reactive Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reactive Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliberative-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deliberative Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deliberative Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-innovations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Innovations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approaches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-based-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM-Based Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLM-Based Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-innovations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Innovations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-llm-agent-revolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The LLM Agent Revolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-paradigm-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Paradigm Shifts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Paradigm Shifts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shift-1-from-rules-to-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shift 1: From Rules to Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift-2-from-reactive-to-deliberative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shift 2: From Reactive to Deliberative
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift-3-from-narrow-to-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shift 3: From Narrow to General
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift-4-from-implicit-to-explicit-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shift 4: From Implicit to Explicit Reasoning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llm-agent-paradigm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM Agent Paradigm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../fundamentals/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../agent-architectures/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../tool-use/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../planning-and-reasoning/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../memory-systems/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../model-context-protocol/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../multi-agent-systems/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../orchestration-patterns/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evaluation/README.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    none
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-deterministic-to-intelligent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Deterministic to Intelligent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deterministic-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deterministic Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deterministic Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactive-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reactive Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reactive Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deliberative-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deliberative Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deliberative Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-innovations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Innovations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approaches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-based-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM-Based Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLM-Based Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Characteristics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-innovations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Innovations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-llm-agent-revolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The LLM Agent Revolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-paradigm-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Paradigm Shifts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Paradigm Shifts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shift-1-from-rules-to-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shift 1: From Rules to Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift-2-from-reactive-to-deliberative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shift 2: From Reactive to Deliberative
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift-3-from-narrow-to-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shift 3: From Narrow to General
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift-4-from-implicit-to-explicit-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shift 4: From Implicit to Explicit Reasoning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Overview
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="evolution-of-agent-systems">Evolution of Agent Systems</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#from-deterministic-to-intelligent">From Deterministic to Intelligent</a></li>
+<li><a href="#deterministic-systems">Deterministic Systems</a></li>
+<li><a href="#reactive-agents">Reactive Agents</a></li>
+<li><a href="#deliberative-agents">Deliberative Agents</a></li>
+<li><a href="#learning-agents">Learning Agents</a></li>
+<li><a href="#llm-based-agents">LLM-Based Agents</a></li>
+<li><a href="#key-paradigm-shifts">Key Paradigm Shifts</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#next-steps">Next Steps</a></li>
+</ul>
+<h2 id="from-deterministic-to-intelligent">From Deterministic to Intelligent</h2>
+<p>The evolution of agent systems represents a progression from rigid, rule-based automation to flexible, goal-directed intelligence. Each generation expanded the scope of autonomy, reasoning capability, and adaptability.</p>
+<p>Understanding this evolution helps you:</p>
+<ul>
+<li>Recognize which architectural patterns apply to different problems</li>
+<li>Choose the right level of agency for your use case</li>
+<li>Appreciate the trade-offs at each level of sophistication</li>
+</ul>
+<h2 id="deterministic-systems">Deterministic Systems</h2>
+<p><strong>Era</strong>: 1950s - present<br />
+<strong>Paradigm</strong>: Fixed rules, predefined logic</p>
+<h3 id="characteristics">Characteristics</h3>
+<ul>
+<li>Execute predetermined sequences of operations</li>
+<li>No decision-making or adaptation</li>
+<li>Predictable, reliable, fast</li>
+<li>Cannot handle unexpected situations</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>Traditional software applications</li>
+<li>Scripts and batch jobs</li>
+<li>State machines</li>
+<li>Scheduled automation</li>
+</ul>
+<h3 id="limitations">Limitations</h3>
+<ul>
+<li>Brittle: breaks when conditions change</li>
+<li>Narrow: only handles anticipated scenarios</li>
+<li>Manual: requires explicit programming for each case</li>
+</ul>
+<h3 id="when-to-use">When to Use</h3>
+<p>Deterministic systems are still the right choice when:</p>
+<ul>
+<li>Requirements are fully specified</li>
+<li>Environment is predictable</li>
+<li>Correctness and predictability are paramount</li>
+<li>Speed and efficiency matter</li>
+</ul>
+<p><strong>Lesson</strong>: Not everything needs to be an agent. Deterministic systems are appropriate for well-defined, stable problems.</p>
+<h2 id="reactive-agents">Reactive Agents</h2>
+<p><strong>Era</strong>: 1980s - present<br />
+<strong>Paradigm</strong>: Sense-act cycles, stimulus-response</p>
+<h3 id="characteristics_1">Characteristics</h3>
+<ul>
+<li>Respond directly to current observations</li>
+<li>No internal state or memory</li>
+<li>Fast, lightweight, simple</li>
+<li>Limited reasoning capability</li>
+</ul>
+<h3 id="architecture">Architecture</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Perception → Action Selection → Execution
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>     ↓              ↑
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>     └─────────────┘
+</span></code></pre></div>
+<p>Each perception triggers an immediate action based on simple rules or learned mappings.</p>
+<h3 id="examples_1">Examples</h3>
+<ul>
+<li>Subsumption architecture (Brooks, 1986)</li>
+<li>Behavior-based robotics</li>
+<li>Reflex-based game AI</li>
+<li>Simple chatbots</li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>Fast response times</li>
+<li>Easy to understand and debug</li>
+<li>Robust to sensor noise</li>
+<li>Works well in dynamic environments</li>
+</ul>
+<h3 id="limitations_1">Limitations</h3>
+<ul>
+<li>No planning ahead</li>
+<li>Cannot handle tasks requiring multiple steps</li>
+<li>No memory of past interactions</li>
+<li>Limited by perception-action mappings</li>
+</ul>
+<h3 id="when-to-use_1">When to Use</h3>
+<p>Reactive agents work well for:</p>
+<ul>
+<li>Real-time control problems</li>
+<li>Environments that require fast responses</li>
+<li>Tasks that can be decomposed into independent behaviors</li>
+<li>Situations where planning is unnecessary or impractical</li>
+</ul>
+<h2 id="deliberative-agents">Deliberative Agents</h2>
+<p><strong>Era</strong>: 1990s - present<br />
+<strong>Paradigm</strong>: Sense-plan-act, explicit reasoning</p>
+<h3 id="characteristics_2">Characteristics</h3>
+<ul>
+<li>Maintain internal models of the world</li>
+<li>Plan sequences of actions before acting</li>
+<li>Reason about goals and strategies</li>
+<li>Can handle complex, multi-step tasks</li>
+</ul>
+<h3 id="architecture_1">Architecture</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Perception → Model Update → Planning → Action Selection → Execution
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>     ↓                                        ↑
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>     └──────────────────────────────────────┘
+</span></code></pre></div>
+<p>The agent builds a model, plans a sequence of actions, and executes the plan.</p>
+<h3 id="examples_2">Examples</h3>
+<ul>
+<li>STRIPS and classical planning systems</li>
+<li>Game-playing agents (chess, Go)</li>
+<li>Path planning for robotics</li>
+<li>Automated schedulers</li>
+</ul>
+<h3 id="key-innovations">Key Innovations</h3>
+<ul>
+<li><strong>Internal representation</strong>: Agents maintain beliefs about the world</li>
+<li><strong>Forward planning</strong>: Reasoning about future states before acting</li>
+<li><strong>Goal reasoning</strong>: Explicitly representing and reasoning about objectives</li>
+</ul>
+<h3 id="advantages_1">Advantages</h3>
+<ul>
+<li>Can solve complex problems requiring multiple steps</li>
+<li>Reasons about long-term consequences</li>
+<li>Handles tasks that require coordination</li>
+<li>Can optimize plans before execution</li>
+</ul>
+<h3 id="limitations_2">Limitations</h3>
+<ul>
+<li>Computationally expensive</li>
+<li>Requires accurate world models</li>
+<li>Can be slow to respond in dynamic environments</li>
+<li>Planning breaks down in uncertain domains</li>
+</ul>
+<h3 id="when-to-use_2">When to Use</h3>
+<p>Deliberative agents excel at:</p>
+<ul>
+<li>Complex task decomposition</li>
+<li>Strategic reasoning</li>
+<li>Problems with clear objectives and known dynamics</li>
+<li>Offline planning scenarios</li>
+</ul>
+<h2 id="learning-agents">Learning Agents</h2>
+<p><strong>Era</strong>: 2000s - present<br />
+<strong>Paradigm</strong>: Experience-driven improvement</p>
+<h3 id="characteristics_3">Characteristics</h3>
+<ul>
+<li>Learn from feedback and experience</li>
+<li>Improve performance over time</li>
+<li>Adapt to changing environments</li>
+<li>Discover strategies through trial and error</li>
+</ul>
+<h3 id="architecture_2">Architecture</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Perception → Learning → Policy → Action
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>     ↓         ↑          ↑        ↓
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>     └─────────────── Reward ─────┘
+</span></code></pre></div>
+<p>The agent learns which actions lead to rewards and adjusts its policy accordingly.</p>
+<h3 id="approaches">Approaches</h3>
+<p><strong>Reinforcement Learning</strong>: Learn through trial and error</p>
+<ul>
+<li>Q-learning, policy gradients</li>
+<li>Applications: game playing, robotics, resource allocation</li>
+</ul>
+<p><strong>Supervised Learning</strong>: Learn from labeled examples</p>
+<ul>
+<li>Classification, regression</li>
+<li>Applications: pattern recognition, prediction</li>
+</ul>
+<p><strong>Imitation Learning</strong>: Learn from demonstrations</p>
+<ul>
+<li>Behavior cloning</li>
+<li>Applications: robotics, autonomous driving</li>
+</ul>
+<h3 id="examples_3">Examples</h3>
+<ul>
+<li>AlphaGo (game playing)</li>
+<li>Recommendation systems</li>
+<li>Robotic manipulation</li>
+<li>Autonomous vehicles</li>
+</ul>
+<h3 id="advantages_2">Advantages</h3>
+<ul>
+<li>Discovers strategies humans might not think of</li>
+<li>Adapts to new situations</li>
+<li>Improves with more data/experience</li>
+<li>Can handle high-dimensional problems</li>
+</ul>
+<h3 id="limitations_3">Limitations</h3>
+<ul>
+<li>Requires extensive training data or simulation</li>
+<li>Can be sample-inefficient</li>
+<li>Black-box behavior can be hard to interpret</li>
+<li>May not generalize to out-of-distribution scenarios</li>
+</ul>
+<h2 id="llm-based-agents">LLM-Based Agents</h2>
+<p><strong>Era</strong>: 2020s - present<br />
+<strong>Paradigm</strong>: Language-mediated reasoning and action</p>
+<h3 id="characteristics_4">Characteristics</h3>
+<ul>
+<li>Use natural language for reasoning and planning</li>
+<li>Leverage pre-trained knowledge</li>
+<li>Highly flexible and general-purpose</li>
+<li>Can use tools and interact with APIs</li>
+</ul>
+<h3 id="architecture_3">Architecture</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Observation → LLM Reasoning → Tool Selection → Tool Execution → Observation
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>      ↓                                                              ↑
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>      └──────────────────────────────────────────────────────────────┘
+</span></code></pre></div>
+<p>The LLM acts as the reasoning engine, deciding which tools to use and interpreting results.</p>
+<h3 id="key-innovations_1">Key Innovations</h3>
+<ul>
+<li><strong>Language as the interface</strong>: Reasoning expressed in natural language</li>
+<li><strong>Few-shot learning</strong>: Adapts to new tasks with minimal examples</li>
+<li><strong>Tool use</strong>: Extends capabilities through external functions</li>
+<li><strong>Chain-of-thought</strong>: Explicit reasoning traces improve reliability</li>
+</ul>
+<h3 id="examples_4">Examples</h3>
+<ul>
+<li>ChatGPT with plugins</li>
+<li>AutoGPT and autonomous agents</li>
+<li>Coding assistants (Copilot, Cursor)</li>
+<li>Research and analysis agents</li>
+</ul>
+<h3 id="advantages_3">Advantages</h3>
+<ul>
+<li>Extremely flexible and general-purpose</li>
+<li>No task-specific training required</li>
+<li>Leverages massive pre-trained knowledge</li>
+<li>Natural language interface for humans</li>
+</ul>
+<h3 id="limitations_4">Limitations</h3>
+<ul>
+<li>Can hallucinate or produce incorrect reasoning</li>
+<li>Non-deterministic behavior</li>
+<li>Expensive inference costs</li>
+<li>Requires careful prompting and orchestration</li>
+</ul>
+<h3 id="the-llm-agent-revolution">The LLM Agent Revolution</h3>
+<p>LLMs enable a new paradigm:</p>
+<ul>
+<li><strong>Reasoning in language</strong>: Makes agent thought process interpretable</li>
+<li><strong>Broad knowledge</strong>: Pre-trained on vast corpora</li>
+<li><strong>Tool use</strong>: Can invoke arbitrary functions</li>
+<li><strong>Few-shot adaptation</strong>: Generalizes to new tasks easily</li>
+</ul>
+<p>This represents the most flexible form of agency yet achieved.</p>
+<h2 id="key-paradigm-shifts">Key Paradigm Shifts</h2>
+<h3 id="shift-1-from-rules-to-learning">Shift 1: From Rules to Learning</h3>
+<ul>
+<li><strong>Before</strong>: Hand-coded rules and logic</li>
+<li><strong>After</strong>: Learning from data and experience</li>
+</ul>
+<h3 id="shift-2-from-reactive-to-deliberative">Shift 2: From Reactive to Deliberative</h3>
+<ul>
+<li><strong>Before</strong>: Immediate stimulus-response</li>
+<li><strong>After</strong>: Planning and reasoning about consequences</li>
+</ul>
+<h3 id="shift-3-from-narrow-to-general">Shift 3: From Narrow to General</h3>
+<ul>
+<li><strong>Before</strong>: Task-specific agents</li>
+<li><strong>After</strong>: General-purpose agents that adapt to many tasks</li>
+</ul>
+<h3 id="shift-4-from-implicit-to-explicit-reasoning">Shift 4: From Implicit to Explicit Reasoning</h3>
+<ul>
+<li><strong>Before</strong>: Neural networks as black boxes</li>
+<li><strong>After</strong>: Language-based reasoning traces</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Agent systems have evolved through several generations:</p>
+<ol>
+<li><strong>Deterministic systems</strong>: Fixed logic, no adaptation</li>
+<li><strong>Reactive agents</strong>: Fast response, no planning</li>
+<li><strong>Deliberative agents</strong>: Planning and reasoning</li>
+<li><strong>Learning agents</strong>: Adaptation through experience</li>
+<li><strong>LLM agents</strong>: Language-mediated, general-purpose intelligence</li>
+</ol>
+<p>Each generation builds on the previous, adding new capabilities while inheriting limitations. Modern agent systems often combine multiple paradigms - using deliberative planning, reactive execution, and learning-based adaptation together.</p>
+<p>Understanding this evolution helps you choose the right architectural approach for your problem.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Continue to <a href="../llm-agent-paradigm/">The LLM Agent Paradigm</a> to dive deeper into how large language models enable a new generation of flexible, powerful agents, and the unique patterns and challenges they introduce.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../what-is-agency/" class="md-footer__link md-footer__link--prev" aria-label="Previous: What is Agency">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                What is Agency
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../llm-agent-paradigm/" class="md-footer__link md-footer__link--next" aria-label="Next: LLM Agent Paradigm">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                LLM Agent Paradigm
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Arc Systems
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.prune","navigation.top","navigation.tracking","search.highlight","toc.follow"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.16f8adc2.min.js"></script>
+      
+    
+  </body>
+</html>
