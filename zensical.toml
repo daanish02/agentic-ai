@@ -2,7 +2,7 @@
 site_name = "Agentic AI"
 site_description = "Notes related to Agentic AI."
 site_author = "Danish Ahmed"
-# site_url = "https://www.example.com/"
+site_url = "https://daanish02.github.io/agentic-ai"
 
 copyright = """
 Copyright &copy; 2026 Arc Systems
