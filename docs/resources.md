@@ -64,7 +64,10 @@
 
 ## Memory Systems
 
-<!-- ### Memory Architecture -->
+### Memory Architecture
+
+- [OpenViking](https://github.com/volcengine/OpenViking)
+
 <!-- ### Short Term Memory -->
 <!-- ### Long Term Memory -->
 <!-- ### Episodic Memory -->
@@ -86,13 +89,21 @@
 ## Multi Agent Systems
 
 <!-- ### Fundamentals -->
-<!-- ### Agent Roles -->
+
+### Agent Roles
+
+- [Agency Agents](https://github.com/msitarzewski/agency-agents)
+- [Impeccable](https://github.com/pbakaus/impeccable)
+
 <!-- ### Communication -->
 <!-- ### Coordination -->
 <!-- ### Delegation -->
 <!-- ### Collaboration -->
 <!-- ### Debate -->
-<!-- ### Swarm Intelligence -->
+
+### Swarm Intelligence
+
+- [MiroFish](https://github.com/666ghj/MiroFish)
 
 ## Orchestration Patterns
 

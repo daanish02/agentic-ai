@@ -125,6 +125,14 @@ nav = [
         { "Continuous Evaluation" = "evaluation/continuous-evaluation.md" },
     ] },
 
+    { "Notes" = [
+        "notes/README.md",
+        { "Tool Patterns" = "notes/tool-definition-patterns.md" },
+        { "Graph Workflows" = "notes/graph-workflows.md" },
+        { "Agent Patterns" = "notes/agent-patterns.md" },
+        { "MCP Usage" = "notes/mcp-implementation-patterns.md" },
+    ] },
+
     { "Resources" = "resources.md" },
 ]
 
